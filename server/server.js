@@ -3,9 +3,9 @@ const app = express();
 const cors = require('cors') 
 const cookieParser = require('cookie-parser')/////////////////////////////////////////////////npm i cookie-parser
 require("./config/mongoose");
-require('dotenv').config();
+// require('dotenv').config();
 app.use(cookieParser())
-app.use(cors({credentials:true, origin:'https://vifiles.onrender.com'}))
+app.use(cors({credentials:true, origin:"https://vifiles.onrender.com"}))//"http://localhost:3000"'https://vifiles.onrender.com'
 app.use(express.json(), express.urlencoded({ extended: true }));
     
 const userRoutes = require("./routes/users.routes");
