@@ -9,14 +9,14 @@ const websiteIcon = require('../images/website.png');
 const Repositories = props => {
     const [list,setList]= useState([])
     useEffect(()=>{
-        axios.get('http://localhost:8000/api/projects')
+        axios.get('https://vifiles-api.onrender.com/api/projects')//'http://localhost:8000/api/projects'
         .then(res =>setList(res.data))
         .catch(res => console.log(res))
     },[])
 
     const handleDelete = item => {
         // e.preventDefault()
-        axios.delete(`http://localhost:8000/api/project/${item._id}`)
+        axios.delete(`https://vifiles-api.onrender.com/api/project/${item._id}`)//https://vifiles-api.onrender.com,http://localhost:8000/api/project/${item._id}`
             .then( res => {
                 console.log("success")
                 setList(list.filter(me=>(me._id !== item._id)))//this just update your state so that you dont have to refresh and it loads in realtime.
@@ -28,7 +28,7 @@ const Repositories = props => {
     const addingLikes = item =>{
         var temp= (Cookies.get('userId')) ? Cookies.get('userId'): "000000"
         console.log(temp)
-        axios.put(`http://localhost:8000/api/project/${item._id}/${temp}`)
+        axios.put(`https://vifiles-api.onrender.com/api/project/${item._id}/${temp}`)//https://vifiles-api.onrender.com,http://localhost:8000/api/project/${item._id}/${temp}
 
         .then( res => {
             var dataNew=list.map(x=>  (x._id === item._id) ?{...x,likes: [...x.likes,temp]}: x );

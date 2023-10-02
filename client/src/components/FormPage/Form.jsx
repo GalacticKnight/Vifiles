@@ -17,7 +17,7 @@ const Form = ({ list, setList, projects, setProjects, old, submit}) => {
 
     const handleUpdate = e => {
         e.preventDefault()
-        axios.put(`http://localhost:8000/api/project/${item._id}`, item)
+        axios.put(`https://vifiles-api.onrender.com/api/project/${item._id}`, item)//https://vifiles-api.onrender.com,`http://localhost:8000/api/project/${item._id}`
             .then( res => {setSuccess(true)} )
             .catch( res => console.log(res.data.errors))
     }
@@ -27,7 +27,7 @@ const Form = ({ list, setList, projects, setProjects, old, submit}) => {
         // USE LIKE TO CREATE PROJECT
 
         console.log('create2', e)
-        axios.post('http://localhost:8000/api/project/create', item)
+        axios.post('https://vifiles-api.onrender.com/api/project/create', item)//https://vifiles-api.onrender.com,'http://localhost:8000/api/project/create'
             .then( res => { 
                 console.log('created:', res.data)
                 setProjects( [...projects, res.data._id] ) 

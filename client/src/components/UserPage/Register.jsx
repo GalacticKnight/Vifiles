@@ -23,7 +23,7 @@ const Register = (props) => {
     // ! Need onsubmithandler for register
     const submitHandler = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:8000/api/register', userReg, {withCredentials:true})
+        axios.post('https://vifiles-api.onrender.com/api/register', userReg, {withCredentials:true})//https://vifiles-api.onrender.com,'http://localhost:8000/api/register'
             .then((res) => {
                 console.log(res);
                 navigate('/')
