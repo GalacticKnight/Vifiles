@@ -14,8 +14,8 @@ const HomePage = () => {
             <NavBar/>
             <Hero/>
             <Tools/>
-            <Projects/>
             <Freelance/>
+            <Projects/>
             <About/>
             <Contact/>
             <Footer/>

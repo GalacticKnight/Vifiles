@@ -197,14 +197,21 @@ code {
   margin: auto;
 }
 
+.freelancefix{
+  width: 80%;
+  /* border: 1px solid rgb(172, 16, 16); */
+  margin: auto;
+}
 .freelanceProjects{
+  
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* this dictates when the grids goes to the next line when it reaches a certain count */
   grid-gap: 2rem;
   margin-top: 30px;
 }
 
-.freelanceCard{
+.freelanceCard{ 
   background-color: rgb(44, 44, 44);
   text-align: center;
   padding: 20px 0;
@@ -212,8 +219,8 @@ code {
 }
 
 .freelanceCard > img{
-  width: 200px;
-  height: 130px;
+  width: 80%;
+  height: 200px;
   border-radius: 5px;
   object-fit: cover;
   object-position: top;
