@@ -29,7 +29,8 @@ const NavBar = () => {
                          :
                         //  <li className='nav-item'><Link to={'/login'} style={linkStyle}>Login</Link></li>
                             // <button style={linkStyle}>
-                                <Link to={'/login'} className='nav-link' style={linkStyle}>Login</Link>
+                                null
+                                // i voided this one. To avoid the recruiter suspicion// <Link to={'/login'} className='nav-link' style={linkStyle}>Login</Link>
                             // </button>
                          }
                         {(Cookies.get('userId')==="6511c6c9add4f1b2bbec10ab")? 

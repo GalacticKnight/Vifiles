@@ -61,7 +61,7 @@ const Freelance = () => {
                     <div className='freelanceCard'>
                         <img src={CareGiver}  alt="website image" />
                         <div>
-                            <h6>OmniEvents Website</h6>
+                            <h6>CareCollab Website</h6>
                             <span className='wordpress'>JavaScript / React.js / Node.js / Express/ MongoDB</span>
                             <div className='projectIcons'>
                                 <img src={githubIcon} onClick={() => window.open('https://github.com/chingu-voyages/v45-tier3-team-48')} alt="web icon" />
